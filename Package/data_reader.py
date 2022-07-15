@@ -195,14 +195,7 @@ class data_reader():
                                 
                             else:
                                 ref_el = None
-                            
-                                
-                                
-                                
-                              
-                              
-                                    
-                            
+                                 
                 except ValueError:
                     print('ValueError')
                     print(dt[i])
