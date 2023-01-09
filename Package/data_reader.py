@@ -44,6 +44,7 @@ class data_reader():
             files = list(filter(lambda x: x.endswith('.tdb') or x.endswith('.TDB'), temp_files))
             if len(files) == 0:
                 print('No tdb file found.')
+		self.file = 'none'
             else:
                 for i in range(len(files)):
                     print(i + 1 ,'. '+ files[i])
@@ -61,6 +62,8 @@ class data_reader():
         
         else:
             self.chooser(path)
+	    if self.file == 'none':
+		return 0
             print('file name: ', self.file)
         try:
             with open(path + '\\'+self.file) as f:
